@@ -1,0 +1,7 @@
+.card{
+  margin: 0 auto 25px;
+  border-radius: 8px;
+  width: 330px;
+  height: 211px;
+  background: linear-gradient(to right, #ec2F4B, #009FFF);
+}
