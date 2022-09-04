@@ -5,3 +5,12 @@
   height: 211px;
   background: linear-gradient(to right, #ec2F4B, #009FFF);
 }
+
+.visa{
+  width: 4.5rem;
+  left: 2px;
+}
+
+.chip{
+  width: 3.0rem;
+}
