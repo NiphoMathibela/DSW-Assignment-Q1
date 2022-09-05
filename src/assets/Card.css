@@ -4,11 +4,14 @@
   width: 330px;
   height: 211px;
   background: linear-gradient(to right, #ec2F4B, #009FFF);
+  padding: 10px;
+  color: aliceblue;
 }
 
 .visa{
   width: 4.5rem;
-  left: 2px;
+  padding: 5px;
+  float: right;
 }
 
 .chip{
