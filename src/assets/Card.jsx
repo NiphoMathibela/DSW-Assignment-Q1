@@ -1,10 +1,32 @@
 import React from "react";
 import "./Card.css";
 
-const Card = () => {
+const Card = (props) => {
   return(
     <div className= "card">
-      <img src= "https://e7.pngegg.com/pngimages/840/663/png-clipart-brand-logo-visa%E3%81%AE%E3%83%88%E3%83%83%E3%83%97%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E6%88%A6%E7%95%A5-product-trademark-visa-gemstone-blue.png" />
+      <div>
+        <img src= "https://github.com/NiphoMathibela/DSW-Assignment-Q1/blob/main/src/assets/visa.png?raw=true" className= "visa" />
+        <img src="https://github.com/NiphoMathibela/DSW-Assignment-Q1/blob/main/src/assets/chip.png?raw=true" className= "chip"/>
+      </div>
+
+      <div>
+        <p>Card Holder</p>
+        <p>{props.cardHolder}</p>
+      </div>
+
+      <div htmlid= "cardNum">
+        <p>Card Number</p>
+        <p>{props.cardNum}</p>
+      </div>
+
+      <div>
+        <p>CVV</p>
+        <p>{props.cvv}</p>
+
+        <p className= "expDate">Exp Date</p>
+        <p>{props.expMonth}/{props.expYear}</p>
+      </div>
+      
     </div>
   )
 }
