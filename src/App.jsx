@@ -65,38 +65,6 @@ function App() {
       console.log("All good!")
     }
 
-
-    // if(cardHolder == null || cardHolder == ""){
-    //   setError(true);
-    //   console.log("enter a name");
-    // } else{
-    //   console.log("name captured");
-    // }
-
-    // if(month.length > 7 || month.length < 7){
-    //   setError(true);
-    //   console.log("not valid date");
-    // } else{
-    //   console.log("valid date");
-    // }
-
-    // if(cvv.length != 3){
-    //   setError(true);
-    //   console.log("invalid cvv");
-    // } else{
-    //   console.log("valid cvv");
-    // }
-    
-    // if(currentYear == expYear){
-    //   setError(true);
-    //   console.log("Nearly expired");
-    // } else{
-    //   console.log("youre good");
-    // }
-
-    // if(error == true){
-    //   setMessage("Please fill in correct detaials, your card number should be 16 digits, your name must be filled in, your CVV number should only be 3 dgits and insert a valid date.");
-    // }
   }
 
   return (
