@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Form from "./assets/Form";
+import Card from "./assets/Card";
 
 
 function App() {
@@ -76,7 +77,13 @@ function App() {
 
   return (
     <div className="App">
-
+      <Card
+        cardHolder= {cardHolder}
+        cardNum= {cardNum}
+        cvv= {cvv}
+        // expMonth= {expMonth}
+        // expYear= {expYear}
+      />
       <Form handleCardNum = {handleCardNum} 
       handleSubmit = {handleSubmit}
       handleCardHolder= {handleCardHolder}

@@ -5,9 +5,9 @@ import Card from "./Card";
 const Form = (props) => {
   return(
     <div className= "container">
-      <Card/>
+      
       <form>
-        
+
         <input type= "number"
         placeholder= "Card Number 16 digits"
         id= "card-num"

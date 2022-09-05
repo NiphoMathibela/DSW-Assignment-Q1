@@ -4,8 +4,10 @@
   width: 330px;
   height: 211px;
   background: linear-gradient(to right, #ec2F4B, #009FFF);
-  padding: 10px;
+  padding: 15px;
   color: aliceblue;
+  font-size: small;
+  line-height: 6px;
 }
 
 .visa{
@@ -16,4 +18,9 @@
 
 .chip{
   width: 3.0rem;
+}
+
+#cardNum{
+  text-align: center;
+  margin: auto;
 }
