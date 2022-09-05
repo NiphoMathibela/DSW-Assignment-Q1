@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Form from "./assets/Form";
 import Card from "./assets/Card";
+import Notification from "./assets/Notification";
 
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
   const [cardHolder, setCardHolder] = useState("");
   const [month, setMonth] = useState("");
   const [cvv, setCvv] = useState();
+  const [error, setError] = useState(false);
+  const [message, setMessage] = useState("");
 
   const handleCardNum = (e) => {
     setCardNum(e.target.value);
@@ -44,35 +47,56 @@ function App() {
     const currentMonth = new Date().getMonth() + 1;
     console.log(currentMonth);
 
-    if(cardNum.match(cardReg)){
+    if(cardNum.length < 16 || cardNum.lenth > 16){
+      setMessage("Your card number should be 16 digits.")
+      return;
       console.log("Actual card");
+    } else if(cardHolder == null || cardHolder == ""){
+      setMessage("Enter your name.")
+    } else if(month.length > 7 || month.length < 7){
+      setMessage("Enter a valid expiration date")
+    } else if(cvv.length < 3 || cvv.length > 3){
+      setMessage("Enter a valid CVV number, it should be 3 digits.")
+      return;
+    } else if(currentYear == expYear){
+      setMessage("Your card is nearly expired")
+      return;
     } else{
-      console.log("not a card");
+      console.log("All good!")
     }
 
-    if(cardHolder == null || cardHolder == ""){
-      console.log("enter a name");
-    } else{
-      console.log("name captured");
-    }
 
-    if(month.length > 7 || month.lenght < 7){
-      console.log("not valid date");
-    } else{
-      console.log("valid date");
-    }
+    // if(cardHolder == null || cardHolder == ""){
+    //   setError(true);
+    //   console.log("enter a name");
+    // } else{
+    //   console.log("name captured");
+    // }
 
-    if(cvv.length != 3){
-      console.log("invalid cvv");
-    } else{
-      console.log("valid cvv");
-    }
+    // if(month.length > 7 || month.length < 7){
+    //   setError(true);
+    //   console.log("not valid date");
+    // } else{
+    //   console.log("valid date");
+    // }
+
+    // if(cvv.length != 3){
+    //   setError(true);
+    //   console.log("invalid cvv");
+    // } else{
+    //   console.log("valid cvv");
+    // }
     
-    if(currentMonth == expMonth && currentYear == expYear){
-      console.log("Nearly expired");
-    } else{
-      console.log("youre good");
-    }
+    // if(currentYear == expYear){
+    //   setError(true);
+    //   console.log("Nearly expired");
+    // } else{
+    //   console.log("youre good");
+    // }
+
+    // if(error == true){
+    //   setMessage("Please fill in correct detaials, your card number should be 16 digits, your name must be filled in, your CVV number should only be 3 dgits and insert a valid date.");
+    // }
   }
 
   return (
@@ -84,6 +108,9 @@ function App() {
         // expMonth= {expMonth}
         // expYear= {expYear}
       />
+
+      {message && <Notification message= {message}/>}
+
       <Form handleCardNum = {handleCardNum} 
       handleSubmit = {handleSubmit}
       handleCardHolder= {handleCardHolder}

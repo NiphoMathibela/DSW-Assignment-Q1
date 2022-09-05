@@ -14,7 +14,7 @@ const Card = (props) => {
         <p>{props.cardHolder}</p>
       </div>
 
-      <div htmlId= "cardNum">
+      <div htmlid= "cardNum">
         <p>Card Number</p>
         <p>{props.cardNum}</p>
       </div>
@@ -23,7 +23,7 @@ const Card = (props) => {
         <p>CVV</p>
         <p>{props.cvv}</p>
 
-        <p htmlId= "expDate">Exp Date</p>
+        <p className= "expDate">Exp Date</p>
         <p>{props.expMonth}/{props.expYear}</p>
       </div>
       

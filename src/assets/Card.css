@@ -20,7 +20,8 @@
   width: 3.0rem;
 }
 
-#cardNum{
+.cardNum{
   width: 80%;
   text-align: center;
+  color: #ec2F4B;
 }

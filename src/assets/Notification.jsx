@@ -1,9 +1,9 @@
-import React from "resct";
+import React from "react";
+import "./Notification.css";
 
 const Notification = (props) => {
   return(
-    <div classNme= "notification">
-      <h3>{props.popUpHead}</h3>
+    <div className= "notification">
       <p>{props.message}</p>
     </div>
   )
