@@ -6,12 +6,16 @@ import Notification from "./assets/Notification";
 
 
 function App() {
-  const [cardNum, setCardNum] = useState();
+  const [cardNum, setCardNum] = useState("################");
   const [cardHolder, setCardHolder] = useState("");
   const [month, setMonth] = useState("");
   const [cvv, setCvv] = useState();
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
+
+  const expSplit = month.split("-");
+    const expMonth = expSplit[1];
+    const expYear = expSplit[0];
 
   const handleCardNum = (e) => {
     setCardNum(e.target.value);
@@ -73,8 +77,8 @@ function App() {
         cardHolder= {cardHolder}
         cardNum= {cardNum}
         cvv= {cvv}
-        // expMonth= {expMonth}
-        // expYear= {expYear}
+        expMonth= {expMonth}
+        expYear= {expYear}
       />
 
       {message && <Notification message= {message}/>}
