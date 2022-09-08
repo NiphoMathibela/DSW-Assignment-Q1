@@ -15,8 +15,8 @@ const Card = (props) => {
         <p>{props.cardHolder}</p>
       </div>
 
-      <div htmlid= "cardNum">
-        <p>Card Number</p>
+      <div className= "cardNum">
+        <p style= {{fontSize: "small"}}>Card Number</p>
         <p>{props.cardNum}</p>
       </div>
 
@@ -28,7 +28,9 @@ const Card = (props) => {
       </div>
       :
     <div className= "card">
-        <div className= "card-strip"><p className= "cvv">CVV {props.cvv}</p></div>
+        <div className= "card-strip">
+          <p className= "cvv">CVV {props.cvv}</p>
+        </div>
     </div>}
     </div>
     
