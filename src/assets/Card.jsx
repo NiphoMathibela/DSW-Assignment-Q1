@@ -20,17 +20,14 @@ const Card = (props) => {
         <p>{props.cardNum}</p>
       </div>
 
-      <div>
-
-        <p className= "expDate">Exp Date</p>
+      <div className= "expDate">
+        <p>Exp Date</p>
         <p>{props.expMonth}/{props.expYear}</p>
       </div>
       </div>
       :
     <div className= "card">
-        <div className= "card-strip">
-          <p className= "cvv">CVV {props.cvv}</p>
-        </div>
+        <p className= "cvv">CVV {props.cvv}</p>
     </div>}
     </div>
     

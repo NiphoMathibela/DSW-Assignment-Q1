@@ -71,7 +71,10 @@ function App() {
     } else if(currentYear == expYear){
       setMessage("Your card is nearly expired")
       return;
-    } else{
+    } else if(currentYear > expYear){
+      setMessage("Your card is expired")
+      return;
+    }else{
       console.log("All good!")
     }
 
