@@ -25,3 +25,14 @@
   text-align: center;
   color: #ec2F4B;
 }
+
+.card-strip{
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  background-color: black;
+}
+
+.cvv{
+  margin-top: 10px;
+}

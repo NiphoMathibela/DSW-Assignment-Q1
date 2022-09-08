@@ -10,7 +10,7 @@ function App() {
   const [cardHolder, setCardHolder] = useState("");
   const [month, setMonth] = useState("");
   const [cvv, setCvv] = useState();
-  const [error, setError] = useState(false);
+  const [cardFlip, setCardFlip] = useState(true);
   const [message, setMessage] = useState("");
 
   const expSplit = month.split("-");
@@ -34,8 +34,14 @@ function App() {
 
   const handleCvv = (e) => {
     setCvv(e.target.value);
+    setCardFlip(false);
     console.log(cvv)
   }
+
+  const flip = () => {
+    setCardFlip(prev => !prev);
+  }
+
 //Submission Of Form
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -79,6 +85,8 @@ function App() {
         cvv= {cvv}
         expMonth= {expMonth}
         expYear= {expYear}
+        cardFlip= {cardFlip}
+        flip= {flip}
       />
 
       {message && <Notification message= {message}/>}
